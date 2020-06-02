@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>LMSProject</display-name>
+
+	<servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>jdbcConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>errorHandlerFilter</filter-name>
+		<filter-class>com.intimetec.lms.configuration.AuthenticationFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>errorHandlerFilter</filter-name>
+		<url-pattern>*.html</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>apiFilter</filter-name>
+		<filter-class>com.intimetec.lms.configuration.ApiFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>apiFilter</filter-name>
+		<url-pattern>/employees/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>apiFilter</filter-name>
+		<url-pattern>/leaves/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>apiFilter</filter-name>
+		<url-pattern>/manageEmployees/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>apiFilter</filter-name>
+		<url-pattern>/manageLeaves/*</url-pattern>
+	</filter-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

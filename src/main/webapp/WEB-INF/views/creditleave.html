@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Update Employee</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"> </script>
+<script src="javascript/creditleave.js" type="text/javascript" ></script>
+</head>
+<body>
+	<div class="head">
+		<div class="home">
+			<div class="dropdown">
+ 			 <button class="dropbtn"><i class="fa fa-bars"></i></button>
+  				<div class="dropdown-content">
+  					<a href="home"><i class="fa fa-home"></i> HOME</a>
+   					<a href="logout"><i class="fa fa-sign-out"></i> LOG OUT</a>
+  				</div>
+			</div>
+			<button class="dropbtnuser"><i class="fa fa-user"></i><span id="user">admin</span></button>
+		</div>
+	</div>
+	<h1 id="h">CREDIT LEAVE</h1>
+	<div class="applyLeave">
+		<div class="design">
+				<select id="employeeid" name="employeeid">
+					<option value="head">SELECT EMPLOYEE</option>
+				</select> 
+				<h5 id="leftassign">casual Leave</h5>
+				<input type="number" id="casual" placeholder="CASUAL LEAVE" value="" >
+				<h5 id="leftassign">Earn Leave</h5>
+				<input type="number" id="earn" placeholder="EARN LEAVE" value="" >
+				<h5 id="leftassign">Duty Leave</h5>
+				<input type="number" id="duty" placeholder="DUTY LEAVE" value="" >
+				<h5 id="leftassign">Sick Leave</h5>
+				<input type="number" id="sick" placeholder="SICK LEAVE" value="" >
+				<h5 id="leftassign">Maternity Leave</h5>
+				<input type="number" id="maternity" placeholder="MATERNITY LEAVE" value="" >
+				<h5 id="leftassign">parental Leave</h5>
+				<input type="number" id="parental" placeholder="PARENTAL LEAVE" value="" >
+				<h5 id="leftassign">leavewithoutpay</h5>
+				<input type="number" id="leavewithoutpay" placeholder="LEAVEWITHOUTPAY LEAVE" value="" >
+  				<input type="submit" id="button" value="UPDATE">
+		</div>
+	</div>
+</body>
+</html>
